@@ -1,0 +1,11 @@
+id,nombre,categoria,cantidad,precio
+31,Chocolate,alimentos,40,2.25
+32,Microondas,tecnologia,5,130.00
+33,Crema corporal,higiene,28,8.50
+34,Galletas,alimentos,60,1.70
+35,Smartphone,tecnologia,9,699.99
+36,Enjuague bucal,higiene,25,3.75
+37,Queso,alimentos,35,4.10
+38,Plancha,tecnologia,12,45.00
+39,Papel higiénico,higiene,45,2.60
+40,Huevos,alimentos,55,2.30

@@ -1,0 +1,11 @@
+id,nombre,categoria,cantidad,precio
+11,Arroz,alimentos,80,1.50
+12,Portátil,tecnologia,6,899.00
+13,Pasta dental,higiene,40,2.40
+14,Monitor,tecnologia,10,150.00
+15,Leche,alimentos,60,0.99
+16,Desodorante,higiene,35,3.10
+17,Tablet,tecnologia,8,250.00
+18,Yogur,alimentos,45,1.25
+19,Toallas,higiene,20,6.20
+20,Altavoces,tecnologia,14,60.00

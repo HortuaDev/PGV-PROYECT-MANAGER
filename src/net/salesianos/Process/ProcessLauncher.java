@@ -25,7 +25,7 @@ public class ProcessLauncher {
         return null;
     }
 
-    public static Process categoryClasificationProcess(String fileName) {
+    public static Process categoryClasificationProcess(String fileName, File finalFile) {
         try {
 
             ProcessBuilder pb = new ProcessBuilder(
@@ -34,8 +34,7 @@ public class ProcessLauncher {
                     "net.salesianos.Process.CategoryClasification",
                     fileName);
 
-            pb.redirectOutput(ProcessBuilder.Redirect.appendTo(
-                    new File("./src/net/salesianos/Files/organizedFiles/FinalFile.csv")));
+            pb.redirectOutput(ProcessBuilder.Redirect.appendTo(finalFile));
 
             return pb.start();
 

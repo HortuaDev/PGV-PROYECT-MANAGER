@@ -11,8 +11,8 @@ import net.salesianos.Process.ProcessLauncher;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // runProcess();
-        // organizeInformation();
+        runProcess();
+        organizeInformation();
         showMenu();
     }
 
@@ -42,14 +42,19 @@ public class App {
     public static void organizeInformation() {
 
         File principalDirectory = new File("./src/net/salesianos/Files/output/");
-
         File[] files = principalDirectory.listFiles();
+        File finalFile = new File("./src/net/salesianos/Files/organizedFiles/FinalFile.csv");
+
+        if (finalFile.exists()) {
+            finalFile.delete();
+        }
 
         for (File file : files) {
             try {
                 String fileName = file.getName().replace(".csv", "");
-                Process process = ProcessLauncher.categoryClasificationProcess(fileName);
+                Process process = ProcessLauncher.categoryClasificationProcess(fileName, finalFile);
                 process.waitFor();
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -59,6 +64,7 @@ public class App {
     public static void showMenu() {
 
         File finalFile = new File("./src/net/salesianos/Files/organizedFiles/FinalFile.csv");
+
         System.out.println("Contenido del fichero final: " + finalFile.getName());
         try (BufferedReader br = new BufferedReader(
                 new FileReader(finalFile))) {

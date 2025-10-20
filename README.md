@@ -67,9 +67,12 @@ code .
 
 3. Crea la carpeta `/bin`, `output/` y `organizedFiles`
 
+```
+
 mkdir bin
 mkdir src/net/salesianos/output
 mkdir src/net/salesianos/organizedFiles
+```
 
 ```
 

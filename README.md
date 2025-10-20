@@ -65,6 +65,18 @@ cd PGV-PROYECT-MANAGER
 code .
 ```
 
+3. Crea la carpeta `/bin`
+
+```
+mkdir bin
+```
+
+4. Compila las clases .java para crear las .class (requerido)
+
+```
+javac -d bin src/net/salesianos/Process/*.java src/net/salesianos/Object/*.java src/App.java
+```
+
 3. Asegúrate de tener instalado:
 
 - Java JDK 11 o superior

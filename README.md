@@ -14,10 +14,15 @@ Programa en Java que lee varios ficheros de productos en paralelo (cada fichero 
 
 ## Estructura del proyecto
 
-- src/net/salesianos/... — código fuente
-- src/net/salesianos/files/input/ — ficheros de entrada (varios)
-- src/net/salesianos/files/output/ — fichero de salida generado
+- src\App.java - Programa principal
+- src\net\salesianos\... — código fuente
+- src\net\salesianos\files\input\ — ficheros de entrada (varios)
+- src\net\salesianos\files\output\ — fichero de salida generado
+- src\net\salesianos\Object\Product.java — Clase producto
+- src\net\salesianos\files\organizedFiles\ — fichero de que contiene todos los datos
 - README.md
+
+<img src="./images/estructura_del_proyecto.png" alt="Estructura del programa" width="300" height="400">
 
 ## Formato de los ficheros de entrada
 
@@ -33,21 +38,24 @@ Ejemplo:
 
 ## Comportamiento del programa
 
-- Escanea un directorio de entrada para localizar ficheros de productos.
-- Crea subprocesos para leer cada fichero de forma concurrente.
-- Normaliza/valida registros (p. ej. tipos y duplicados).
-- Fusiona todos los registros en un único fichero de salida (p. ej. data/output/fileResult.csv).
-- Ordena los registros por un campo configurable (por ejemplo id o nombre).
-- Al finalizar, lee el fichero de salida y lo muestra por consola.
+- Escanea un directorio de entrada para localizar ficheros de productos con terminacion .csv.
+- Crea un subproceso por cada fichero .csv que encuentra (se ejecuta de forma concurrente).
+- Cada subProceso:
+- Crea un fichero de salida con los datos organizados de manera alfabetica por cada fichero de entrada.
+- En el programa principal:
+- Se crea un proceso que lee los ficheros de salida organizados de manera alfabetica.
+- Fusiona todos los registros en un único fichero de salida (data/output/FileResult.csv).
+- Se crea un metodo que lee el fichero final con todos los datos insertados de todos los ficheros (FinalResult.csv).
+- Al finalizar, se lee el fichero de salida y lo muestra por consola de manera ordenada, organizados por el campo categoria.
 
 ## Uso (ejemplos)
 
-### Guía de inicio rápido
+### Guía de inicio
 
 1. Clona el repositorio:
 
 ```cmd
-git clone https://github.com/tu-usuario/PGV-PROYECT-MANAGER.git
+git clone https://github.com/HortuaDev/PGV-PROYECT-MANAGER.git
 ```
 
 2. Abre el proyecto en VSCode:
@@ -57,12 +65,30 @@ cd PGV-PROYECT-MANAGER
 code .
 ```
 
-3. Asegúrate de tener instalado:
+3. Crea la carpeta `\bin`, `output\` y `organizedFiles`
+
+```
+
+mkdir bin
+mkdir src\net\salesianos\output
+mkdir src\net\salesianos\organizedFiles
+
+```
+
+4. Compila las clases .java para crear las .class (requerido)
+
+```
+
+javac -d bin src/net/salesianos/Process/_.java src/net/salesianos/Object/_.java src/App.java
+
+```
+
+5. Asegúrate de tener instalado:
 
 - Java JDK 11 o superior
 - Extension Pack for Java en VSCode
 
-4. Ejecuta el programa:
+6. Ejecuta el programa:
    presiona clik derecho sobre el archivo `App.java` y seleciona la opcion `Run Java`
 
 ![Ejecutar programa](./images/ejemplo_run_java.png)
@@ -70,10 +96,22 @@ code .
 ## Ejemplo de salida por consola
 
 Al terminar, el programa imprimirá algo tipo:
+Organizando todos los productos por categoria
 
-`Fichero generado: data/output/fileResult.csv
-Registros totales: 124
-Mostrando 10 primeros registros:
-1,Mouse,12.50,10
-2,Teclado,25.00,5
-...`
+```
+
+Contenido del fichero final: FinalFile.csv
+
+## CATEGORiA: alimentos
+
+## ID NOMBRE CANTIDAD PRECIO
+
+1 arepa 40,00 2,25
+4 empanada 60,00 1,70
+7 malta 35,00 4,10
+
+```
+
+```
+
+```

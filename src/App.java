@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,7 +18,7 @@ public class App {
 
     public static void runProcess() {
 
-        File directory = new File("./src/net/salesianos/files/input");
+        File directory = new File("./src/net/salesianos/files/input/");
         String[] files = directory.list();
 
         List<Process> processList = new ArrayList<>();

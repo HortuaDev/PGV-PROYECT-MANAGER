@@ -1,11 +1,11 @@
 id,nombre,categoria,cantidad,precio
-21,Atún,alimentos,30,2.10
-22,Cámara,tecnologia,9,320.00
+21,Atun,alimentos,30,2.10
+22,Camara,tecnologia,9,320.00
 23,Perfume,higiene,18,25.00
 24,Helado,alimentos,25,3.50
 25,Impresora,tecnologia,7,120.00
 26,Servilletas,higiene,50,1.70
 27,Smartwatch,tecnologia,11,199.99
 28,Carne,alimentos,22,6.80
-29,Champú infantil,higiene,15,4.90
+29,Champu infantil,higiene,15,4.90
 30,Disco duro externo,tecnologia,10,75.00

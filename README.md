@@ -76,7 +76,7 @@ mkdir src\net\salesianos\organizedFiles
 4. Compila las clases .java para crear las .class (requerido)
 
 ```
-javac -d bin src/net/salesianos/Process/_.java src/net/salesianos/Object/_.java src/App.java
+javac -d bin src/net/salesianos/Process/*.java src/net/salesianos/Object/*.java src/App.java
 ```
 
 5. Asegúrate de tener instalado:

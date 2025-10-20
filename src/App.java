@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -11,9 +12,46 @@ import net.salesianos.Process.ProcessLauncher;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runProcess();
-        organizeInformation();
-        showMenu();
+        basicStructure();
+        // runProcess();
+        // organizeInformation();
+        // showMenu();
+    }
+
+    public static void basicStructure() {
+
+        File binDirectory = new File("./bin");
+
+        if (!binDirectory.exists()) {
+            binDirectory.mkdirs();
+        }
+        File outputDirectory = new File("./src/net/salesianos/Files/output/");
+
+        if (!outputDirectory.exists()) {
+            outputDirectory.mkdirs();
+        }
+        File organizedFilesDirectory = new File("./src/net/salesianos/Files/organizedFiles/");
+        if (!organizedFilesDirectory.exists()) {
+            organizedFilesDirectory.mkdirs();
+        }
+
+        try {
+            ProcessBuilder pb = new ProcessBuilder(
+                    "javac",
+                    "-d", "./bin",
+                    "./src/net/salesianos/Object/Product.java",
+                    "./src/net/salesianos/Process/*.java",
+                    "./src/App.java");
+
+            pb.inheritIO();
+            Process process = pb.start();
+            process.waitFor(); // Esperar a que termine
+
+            System.out.println("Compilación completada.");
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void runProcess() {

@@ -15,7 +15,7 @@ public class OrganiceInfoFile {
         List<Product> products = new java.util.ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(
-                new FileReader("./src/net/salesianos/Files/input/" + fileName + ".csv"));) {
+                new FileReader("./src/net/salesianos/files/input/" + fileName + ".csv"));) {
 
             String line = "";
             boolean firstLine = true;

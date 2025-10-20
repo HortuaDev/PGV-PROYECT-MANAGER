@@ -15,7 +15,7 @@ public class CategoryClasification {
         String fileName = args[0];
         List<Product> products = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(
-                new FileReader("./src/net/salesianos/Files/output/" + fileName + ".csv"))) {
+                new FileReader("./src/net/salesianos/files/output/" + fileName + ".csv"))) {
 
             String line = "";
 

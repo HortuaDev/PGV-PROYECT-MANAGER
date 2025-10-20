@@ -14,7 +14,7 @@ public class ProcessLauncher {
                     "net.salesianos.Process.OrganiceInfoFile",
                     fileName);
 
-            pb.redirectOutput(new File("./src/net/salesianos/Files/output/" + fileName + ".csv"));
+            pb.redirectOutput(new File("./src/net/salesianos/files/output/" + fileName + ".csv"));
 
             return pb.start();
 

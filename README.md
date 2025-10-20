@@ -68,19 +68,15 @@ code .
 3. Crea la carpeta `\bin`, `output\` y `organizedFiles`
 
 ```
-
 mkdir bin
 mkdir src\net\salesianos\output
 mkdir src\net\salesianos\organizedFiles
-
 ```
 
 4. Compila las clases .java para crear las .class (requerido)
 
 ```
-
-javac -d bin src/net/salesianos/Process/_.java src/net/salesianos/Object/_.java src/App.java
-
+javac -d bin src/net/salesianos/Process/*.java src/net/salesianos/Object/*.java src/App.java
 ```
 
 5. Asegúrate de tener instalado:
@@ -98,20 +94,14 @@ javac -d bin src/net/salesianos/Process/_.java src/net/salesianos/Object/_.java 
 Al terminar, el programa imprimirá algo tipo:
 Organizando todos los productos por categoria
 
-```
-
 Contenido del fichero final: FinalFile.csv
 
 ## CATEGORiA: alimentos
 
-## ID NOMBRE CANTIDAD PRECIO
+### ID NOMBRE CANTIDAD PRECIO
 
+```
 1 arepa 40,00 2,25
 4 empanada 60,00 1,70
 7 malta 35,00 4,10
-
-```
-
-```
-
 ```

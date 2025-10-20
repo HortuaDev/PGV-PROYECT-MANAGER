@@ -14,12 +14,12 @@ Programa en Java que lee varios ficheros de productos en paralelo (cada fichero 
 
 ## Estructura del proyecto
 
-- src/App.java - Programa principal
-- src/net/salesianos/... — código fuente
-- src/net/salesianos/files/input/ — ficheros de entrada (varios)
-- src/net/salesianos/files/output/ — fichero de salida generado
-- src/net/salesianos/Object/Product.java — Clase producto
-- src/net/salesianos/files/organizedFiles/ — fichero de que contiene todos los datos
+- src\App.java - Programa principal
+- src\net\salesianos\... — código fuente
+- src\net\salesianos\files\input\ — ficheros de entrada (varios)
+- src\net\salesianos\files\output\ — fichero de salida generado
+- src\net\salesianos\Object\Product.java — Clase producto
+- src\net\salesianos\files\organizedFiles\ — fichero de que contiene todos los datos
 - README.md
 
 <img src="./images/estructura_del_proyecto.png" alt="Estructura del programa" width="300" height="400">
@@ -65,11 +65,11 @@ cd PGV-PROYECT-MANAGER
 code .
 ```
 
-3. Crea la carpeta `/bin`, `output/` y `organizedFiles`
+3. Crea la carpeta `\bin`, `output\` y `organizedFiles`
 
 mkdir bin
-mkdir src/net/salesianos/output
-mkdir src/net/salesianos/organizedFiles
+mkdir src\net\salesianos\output
+mkdir src\net\salesianos\organizedFiles
 
 ```
 

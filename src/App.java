@@ -6,57 +6,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
 import net.salesianos.Object.Product;
 import net.salesianos.Process.ProcessLauncher;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        basicStructure();
-        // runProcess();
-        // organizeInformation();
-        // showMenu();
-    }
-
-    public static void basicStructure() {
-
-        File binDirectory = new File("./bin");
-
-        if (!binDirectory.exists()) {
-            binDirectory.mkdirs();
-        }
-        File outputDirectory = new File("./src/net/salesianos/Files/output/");
-
-        if (!outputDirectory.exists()) {
-            outputDirectory.mkdirs();
-        }
-        File organizedFilesDirectory = new File("./src/net/salesianos/Files/organizedFiles/");
-        if (!organizedFilesDirectory.exists()) {
-            organizedFilesDirectory.mkdirs();
-        }
-
-        try {
-            ProcessBuilder pb = new ProcessBuilder(
-                    "javac",
-                    "-d", "./bin",
-                    "./src/net/salesianos/Object/Product.java",
-                    "./src/net/salesianos/Process/*.java",
-                    "./src/App.java");
-
-            pb.inheritIO();
-            Process process = pb.start();
-            process.waitFor(); // Esperar a que termine
-
-            System.out.println("Compilación completada.");
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        runProcess();
+        organizeInformation();
+        showMenu();
     }
 
     public static void runProcess() {
 
-        File directory = new File("./src/net/salesianos/Files/input/");
+        File directory = new File("./src/net/salesianos/files/input/");
         String[] files = directory.list();
 
         List<Process> processList = new ArrayList<>();

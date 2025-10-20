@@ -11,7 +11,7 @@ public class ProcessLauncher {
             ProcessBuilder pb = new ProcessBuilder(
                     "java",
                     "-cp", "./bin",
-                    "net.salesianos.Process.OrganiceInfoFile",
+                    "net/salesianos/Process/OrganiceInfoFile",
                     fileName);
 
             pb.redirectOutput(new File("./src/net/salesianos/files/output/" + fileName + ".csv"));
@@ -31,7 +31,7 @@ public class ProcessLauncher {
             ProcessBuilder pb = new ProcessBuilder(
                     "java",
                     "-cp", "./bin",
-                    "net.salesianos.Process.CategoryClasification",
+                    "net/salesianos/Process/CategoryClasification",
                     fileName);
 
             pb.redirectOutput(ProcessBuilder.Redirect.appendTo(finalFile));

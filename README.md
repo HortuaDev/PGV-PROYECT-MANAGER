@@ -67,24 +67,26 @@ code .
 
 3. Crea la carpeta `/bin`, `output/` y `organizedFiles`
 
-```
 mkdir bin
-mkdir src/net/salesioanos/output
-mkdir src/net/salesioanos/organizedFiles
+mkdir src/net/salesianos/output
+mkdir src/net/salesianos/organizedFiles
+
 ```
 
 4. Compila las clases .java para crear las .class (requerido)
 
 ```
-javac -d bin src/net/salesianos/Process/*.java src/net/salesianos/Object/*.java src/App.java
+
+javac -d bin src/net/salesianos/Process/_.java src/net/salesianos/Object/_.java src/App.java
+
 ```
 
-3. Asegúrate de tener instalado:
+5. Asegúrate de tener instalado:
 
 - Java JDK 11 o superior
 - Extension Pack for Java en VSCode
 
-4. Ejecuta el programa:
+6. Ejecuta el programa:
    presiona clik derecho sobre el archivo `App.java` y seleciona la opcion `Run Java`
 
 ![Ejecutar programa](./images/ejemplo_run_java.png)
@@ -98,12 +100,14 @@ Organizando todos los productos por categoria
 
 Contenido del fichero final: FinalFile.csv
 
- CATEGORiA: alimentos
------------------------------------------------------------
-ID     NOMBRE               CANTIDAD     PRECIO
------------------------------------------------------------
-1     arepa                40,00        2,25
-4     empanada             60,00        1,70
-7     malta                35,00        4,10
+## CATEGORiA: alimentos
+
+## ID NOMBRE CANTIDAD PRECIO
+
+1 arepa 40,00 2,25
+4 empanada 60,00 1,70
+7 malta 35,00 4,10
+
+```
 
 ```

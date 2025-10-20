@@ -65,10 +65,12 @@ cd PGV-PROYECT-MANAGER
 code .
 ```
 
-3. Crea la carpeta `/bin`
+3. Crea la carpeta `/bin`, `output/` y `organizedFiles`
 
 ```
 mkdir bin
+mkdir src/net/salesioanos/output
+mkdir src/net/salesioanos/organizedFiles
 ```
 
 4. Compila las clases .java para crear las .class (requerido)
